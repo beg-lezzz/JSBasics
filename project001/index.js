@@ -128,7 +128,7 @@ function getMax(firstNumber, secondNumber, thirdNumber) {
     return max
 }
 
-function getResult(action) {
+function getCalc(action) {
     const number1 = +(document.getElementById("number1").value);
     const number2 = +(document.getElementById("number2").value);
 
