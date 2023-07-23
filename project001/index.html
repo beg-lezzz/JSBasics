@@ -5,15 +5,63 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <h2>Результат выполнения задания №1</h2>
-    <p id="temperatureC"></p>
-    <p id="temperatureF"></p>
 
-    <h2>Результат выполнения задания №2</h2>
-    <p id="admin"></p>
+    <div class="container">
+        <details class="homework">
+            <summary class="homework-name">
+                Домашнее задание №1
+            </summary>
+
+            <div class="homework-done">
+                <h3>Результат выполнения задания №1</h3>
+                <p id="temperatureC"></p>
+                <p id="temperatureF"></p>
+
+                <h3>Результат выполнения задания №2</h3>
+                <p id="admin"></p>
+            </div>
+        </details>
+
+        <details class="homework" open>
+            <summary class="homework-name">
+                Домашнее задание №2
+            </summary>
+
+            <div class="homework-done">
+                <h3>Результат выполнения задания №1</h3>
+                <div class="input-container">
+                    <label for="num1">Введите первое число</label><input class="input-number" type="number" id="num1">
+
+                    <label for="num2">Введите первое число</label> <input class="input-number" type="number" id="num2">
+
+                    <button class="check-button" onclick="checkNumbers()">Проверить условия</button>
+                </div>
+
+                <h3>Результат выполнения задания №2</h3>
+                <button class="check-button" onclick="ternarOper()">Проверить оператор</button>
+
+                <h3>Результат выполнения задания №3</h3>
+                <div class="input-container">
+                    <label for="numberOfDay">Введите номер дня месяца (1-31)</label><input class="input-number" type="number" id="numberOfDay">
+
+                    <button class="check-button" onclick="decadeOfMonth()">Узнать декаду</button>
+                </div>
+
+                <h3>Результат выполнения задания №4</h3>
+
+                <div class="input-container">
+                    <label for="number">Введите целое положительное число не менее, чем из трех знаков</label><input class="input-number" type="number" id="number">
+
+                    <button class="check-button" onclick="partsOfNumber()">Разобрать число</button>
+                </div>
+
+            </div>
+        </details>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

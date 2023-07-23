@@ -1,0 +1,50 @@
+.container {
+    padding: 10px;
+    font-family: "Roboto Light", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.homework {
+    display: flex;
+}
+
+.homework-done {
+    padding-left: 25px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 5px;
+}
+
+.input-number {
+    width: 60px;
+}
+
+.check-button {
+    width: 150px;
+}
+
+.homework-name {
+    display: flex;
+    gap: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+details > summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+summary:after {
+    content: url("img/plus.png");
+}
+
+details[open] summary:after {
+    content: url("img/minus.png");
+}
