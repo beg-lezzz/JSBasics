@@ -61,6 +61,45 @@
 
             </div>
         </details>
+
+        <details class="homework" open>
+            <summary class="homework-name">
+                Домашнее задание №3
+            </summary>
+
+            <div class="homework-done">
+                <h3>Результат выполнения задания №1</h3>
+                <p id="cube"></p>
+
+                <h3>Результат выполнения задания №2</h3>
+                <div class="input-container">
+                    <label for="salary">Введите зарплату</label><input class="input-number" type="text" id="salary">
+
+                    <button class="check-button" onclick="getSalary()">Вычесть налоги</button>
+                </div>
+
+                <h3>Результат выполнения задания №3</h3>
+                <div class="input-container">
+                    <div class="input-container">
+                        <label for="firstNumber">Введите первое число</label><input class="input-number" type="number" id="firstNumber">
+                        <label for="secondNumber">Введите второе число</label><input class="input-number" type="number" id="secondNumber">
+                        <label for="thirdNumber">Введите третье число</label><input class="input-number" type="number" id="thirdNumber">
+                        <button class="check-button" onclick="getResult()">Найти максимум</button>
+                    </div>
+                </div>
+
+                <h3>Результат выполнения задания №4</h3>
+                    <div class="input-container">
+                        <label for="number1">Введите первое число</label><input class="input-number" type="number" id="number1">
+                        <label for="number2">Введите второе число</label><input class="input-number" type="number" id="number2">
+                        <button class="check-button" onclick="getResult('+')"> + </button>
+                        <button class="check-button" onclick="getResult('-')"> - </button>
+                        <button class="check-button" onclick="getResult('*')"> * </button>
+                        <button class="check-button" onclick="getResult('/')"> '/' </button>
+                    </div>
+
+            </div>
+        </details>
     </div>
     <script src="index.js"></script>
 </body>

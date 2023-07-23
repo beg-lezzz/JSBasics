@@ -76,3 +76,90 @@ function partsOfNumber() {
         alert("Введено некорректное значение")
     }
 }
+
+function exponentCube(number) {
+    return number ** 3
+}
+
+let cubeResult = exponentCube(2) + exponentCube(3);
+
+document.getElementById("cube").innerHTML = `2^3 степени + 3 ^ 3 степени = ${cubeResult}`;
+
+
+function getSalary() {
+    const salary = +(document.getElementById("salary").value);
+    if (!isNaN(salary) && salary > 0) {
+        alert(`Размер заработной платы за вычетом налогов равен ${subTax(salary)}`)
+    } else {
+        alert("Введено некорректное значение")
+    }
+}
+
+function subTax(number) {
+    return number * 0.87
+}
+
+function getResult() {
+    const firstNumber = +(document.getElementById("firstNumber").value);
+    const secondNumber = +(document.getElementById("secondNumber").value);
+    const thirdNumber = +(document.getElementById("thirdNumber").value);
+
+    if (!isNaN(firstNumber) && !isNaN(secondNumber) && !isNaN(thirdNumber)) {
+        if (firstNumber === secondNumber && secondNumber === thirdNumber) {
+            alert(`Все числа равны между собой и равны ${firstNumber}`)
+        } else {
+            alert(`Максимальное из трех чисел ${firstNumber}, ${secondNumber}, ${thirdNumber} = ${getMax(firstNumber, secondNumber, thirdNumber)}`)
+        }
+    } else {
+        alert("Введены некорректные данные")
+    }
+}
+
+function getMax(firstNumber, secondNumber, thirdNumber) {
+    let array = [firstNumber, secondNumber, thirdNumber];
+    let max = array[0]
+
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] > max) {
+            max = array[i]
+        }
+    }
+
+    return max
+}
+
+function getResult(action) {
+    const number1 = +(document.getElementById("number1").value);
+    const number2 = +(document.getElementById("number2").value);
+
+    switch (action) {
+        case "+":
+            alert(`Сумма чисел = ${sum(number1, number2)}`)
+            break
+        case "-":
+            alert(`Разность чисел = ${sub(number1, number2)}`)
+            break
+        case "*":
+            alert(`Произведение чисел = ${mult(number1, number2)}`)
+            break
+        case "/":
+            alert(`Частное чисел = ${div(number1, number2)}`)
+            break
+    }
+}
+
+function sum(number1, number2) {
+    return number1 + number2
+}
+
+function sub(number1, number2) {
+    return number2 > number1 ? (number2 - number1) : (number1 - number2)
+}
+
+function mult(number1, number2) {
+    return number1 * number2
+}
+
+function div(number1, number2) {
+    return number1 / number2
+}
