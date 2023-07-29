@@ -26,7 +26,7 @@
             </div>
         </details>
 
-        <details class="homework" open>
+        <details class="homework">
             <summary class="homework-name">
                 Домашнее задание №2
             </summary>
@@ -36,7 +36,7 @@
                 <div class="input-container">
                     <label for="num1">Введите первое число</label><input class="input-number" type="number" id="num1">
 
-                    <label for="num2">Введите первое число</label> <input class="input-number" type="number" id="num2">
+                    <label for="num2">Введите второе число</label> <input class="input-number" type="number" id="num2">
 
                     <button class="check-button" onclick="checkNumbers()">Проверить условия</button>
                 </div>
@@ -62,7 +62,7 @@
             </div>
         </details>
 
-        <details class="homework" open>
+        <details class="homework">
             <summary class="homework-name">
                 Домашнее задание №3
             </summary>
@@ -92,11 +92,33 @@
                     <div class="input-container">
                         <label for="number1">Введите первое число</label><input class="input-number" type="number" id="number1">
                         <label for="number2">Введите второе число</label><input class="input-number" type="number" id="number2">
-                        <button class="check-button" onclick="getCalc('+')"> + </button>
-                        <button class="check-button" onclick="getCalc('-')"> - </button>
-                        <button class="check-button" onclick="getCalc('*')"> * </button>
-                        <button class="check-button" onclick="getCalc('/')"> '/' </button>
+                        <button class="check-button" onclick="getCalc('+')"> Сумма </button>
+                        <button class="check-button" onclick="getCalc('-')"> Разность </button>
+                        <button class="check-button" onclick="getCalc('*')"> Произведение </button>
+                        <button class="check-button" onclick="getCalc('/')"> Частное </button>
                     </div>
+
+            </div>
+        </details>
+
+        <details class="homework" open>
+            <summary class="homework-name">
+                Домашнее задание №4
+            </summary>
+
+            <div class="homework-done">
+                <h3>Результат выполнения задания №1</h3>
+                <button class="check-button" onclick="printEleven()">Вывести 11 чисел</button>
+
+                <h3>Результат выполнения задания №2</h3>
+                <button class="check-button" onclick="arraySplice()">Вывести массив</button>
+
+                <h3>Результат выполнения задания №3</h3>
+                <button class="check-button" onclick="arrRandom()">Вывести результаты</button>
+
+                <h3>Результат выполнения задания №4</h3>
+                <button class="check-button" onclick="triangle()">Вывести горку</button>
+
 
             </div>
         </details>

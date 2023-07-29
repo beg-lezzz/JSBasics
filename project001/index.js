@@ -163,3 +163,55 @@ function mult(number1, number2) {
 function div(number1, number2) {
     return number1 / number2
 }
+
+function printEleven() {
+    const alertArr = [];
+    for (let i = 0; i < 11; i++) {
+        let phrase = i % 2 === 0 ? "четное" : "нечетное"
+        if (i === 0) {
+            phrase = "это ноль"
+        } else if (i % 2 === 0) {
+            phrase = "четное число"
+        } else {
+            phrase = "нечетное число"
+        }
+        alertArr.push(`${i} - ${phrase}`)
+    }
+
+    alert(alertArr.join('\n'));
+
+}
+
+function arraySplice() {
+    let arr = [1, 2, 3, 4, 5, 6, 7]
+    alert(`Исходный массив - ${arr.join(', ')}`)
+    arr.splice(3,2)
+    alert(`Измененный массив - ${arr.join(', ')}`)
+}
+
+function arrRandom() {
+    const arr = [];
+    let sum = 0;
+    let min = 9;
+    let countThree = 0;
+    for (let i = 0; i < 10; i++) {
+        arr.push(Math.floor(Math.random() * 10))
+        sum = sum + arr[i];
+        min = min > arr[i] ? min = arr[i] : min;
+        arr[i] === 3 ? countThree++ : countThree;
+    }
+
+    alert(`Массив - ${arr.join(', ')}
+    \nСумма - ${sum}\nМинимум - ${min}\n${countThree > 0 ? "есть 3" : "нет 3"}`)
+}
+
+function triangle() {
+    let printStr = '';
+    const alertArr=[];
+    for (let i = 0; i < 20; i++) {
+        printStr = printStr + 'x'
+        console.log(`${printStr}`)
+        alertArr.push(printStr);
+    }
+    alert(`Горка выведена в консоли и ниже:\n${alertArr.join('\n')}`)
+}
