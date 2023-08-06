@@ -45,7 +45,6 @@ let counter = createCounter(0);
 
 for (let i = 0; i < 3; i++) {
     paragraphSecond.append(counter.increment());
-    // i < 2 ? paragraphSecond.append(' => ') : null
     paragraphSecond.append(' => ')
 }
 
@@ -54,36 +53,36 @@ for (let i = 0; i < 3; i++) {
     i < 2 ? paragraphSecond.append(' => ') : null
 }
 
-// Задание 2
+// Задание 3
 
 const headerThird = document.createElement('h2');
 const paragraphThird = document.createElement('p');
 document.body.append(headerThird);
 document.body.append(paragraphThird);
+
 headerThird.append('Решение задания №3\n')
 
 const button = document.getElementById('factorialButton');
 
 const division = document.createElement('div');
 division.classList.add('factorial-form');
+
 const inputForm = document.createElement('input');
 inputForm.type = 'number';
 inputForm.id = 'factorial';
+
 const buttonClick = document.createElement('input');
 buttonClick.type = 'button';
 buttonClick.value = 'Вычислить факториал'
 
 const divisionOutput = document.createElement('div');
 divisionOutput.id = 'printBlock';
+
 division.append(inputForm);
 division.append(buttonClick);
 division.append(divisionOutput);
 document.body.append(division);
-buttonClick.addEventListener('click', (event) => {
-    let inputNumber = document.getElementById('factorial');
-    let printer = document.getElementById('printBlock');
-    printer.innerHTML = `${inputNumber.value}! = ${factorial(inputNumber.value)}`;
-})
+buttonClick.addEventListener('click', (event) => clickButton());
 
 const factorial = (num) => {
     if (num === 1 || num === 0) {
@@ -94,6 +93,7 @@ const factorial = (num) => {
 }
 
 function clickButton() {
+    let inputNumber = document.getElementById('factorial');
     let printer = document.getElementById('printBlock');
-    printer.innerHTML = factorial(inputNumber.value);
+    printer.innerHTML = `${inputNumber.value}! = ${factorial(inputNumber.value)}`;
 }
